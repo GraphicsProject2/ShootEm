@@ -91,7 +91,8 @@ public class WeaponController : MonoBehaviour
             // Make a bullet and set its direction
             BulletController b = Instantiate<BulletController>(bulletPrefab);
             b.transform.position = this.transform.position;
-            b.transform.rotation = this.transform.rotation;
+            b.transform.rotation = player.transform.rotation;
+            //b.transform.LookAt(player.transform.position + player.transform.forward);
 
             // Adjust the rotation by the errorMargin
             newXRot = b.transform.rotation.x + (Random.Range(-shotError,shotError) * shotErrorCoefficient);

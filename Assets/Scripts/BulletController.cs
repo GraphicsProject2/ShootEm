@@ -26,6 +26,7 @@ public class BulletController : MonoBehaviour
     {
         // Record the inital location of the bullet inorder to calculate range 
         initialPos = this.transform.position;
+
     }
 
     // Update is called once per frame
