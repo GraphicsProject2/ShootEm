@@ -11,12 +11,14 @@ public class WeaponController : MonoBehaviour
     public BulletController bulletPrefab;
     public Text ammoDisplay;
     public Text reloadDisplay;
+    public GameObject player;
     //public Text debugDisplay;
 
     public int ammoCapacity;
     public float fireSpeed;
     public float reloadSpeed;
     public float accuracy;
+    public float distanceFromPlayer;
 
     private int ammunition;
     private float timeSinceLastReload;
@@ -39,11 +41,39 @@ public class WeaponController : MonoBehaviour
     }
 
     // Update is called once per frame
+
+
+
     void Update()
     {
 
+        //////////////////////////// Movement And Direction ////////////////////////////
+
+
+        // Handle the position of the weapon relative to the player
+        this.transform.position = player.transform.position + (player.transform.forward * distanceFromPlayer);
+
+        // Handle the direction the weapon is faceing (Sorced from PlayerMovement)
+        // Adapted from Lab 8 solutions but is being utilised to control the direction of a character
+        Vector2 mouseScreenPos = Input.mousePosition;
+
+        // Take the distance from the camera
+        float distanceFromCameraToXZPlane = Camera.main.transform.position.y;
+
+        // Apply it to the screen
+        Vector3 screenPosWithZDistance = (Vector3)mouseScreenPos + (Vector3.forward * distanceFromCameraToXZPlane);
+
+        // Find the final facing position
+        Vector3 facepos = Camera.main.ScreenToWorldPoint(screenPosWithZDistance);
+
+        // Set the player to look at the point of intercetion
+        this.transform.LookAt(new Vector4(facepos.x, player.transform.forward.y, facepos.z));
+
+
+        //////////////////////////// Weapon Mechanics  ///////////////////////////////////
+
         // Reload the weapon
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             // Reset the ammunition count
             ammunition = ammoCapacity;
@@ -91,6 +121,9 @@ public class WeaponController : MonoBehaviour
         { 
             shotError = shotError - (Time.deltaTime * shotErrorCoefficient);
         }
+
+
+        ////////////////////////////// UI ////////////////////////////////////////////////////
 
         // Show if the user is reloading or not
         if(timeSinceLastReload > reloadSpeed)
