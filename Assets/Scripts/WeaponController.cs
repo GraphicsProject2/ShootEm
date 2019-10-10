@@ -50,8 +50,10 @@ public class WeaponController : MonoBehaviour
         //////////////////////////// Movement And Direction ////////////////////////////
 
 
-        // Handle the position of the weapon relative to the player
-        this.transform.position = player.transform.position + (player.transform.forward * distanceFromPlayer);
+        // Handle the position of the weapon relative to the player 
+        this.transform.position = player.transform.position + (player.transform.forward * distanceFromPlayer)
+            + (player.transform.right * distanceFromPlayer);
+
 
         // Handle the direction the weapon is faceing (Sorced from PlayerMovement)
         // Adapted from Lab 8 solutions but is being utilised to control the direction of a character

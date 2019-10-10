@@ -7,6 +7,7 @@ using UnityEngine;
 public class LaserController : MonoBehaviour
 {
     private LineRenderer line;
+    private readonly float lineWidth = 0.1f;
 
     public GameObject weaponModel;
     public float laserDistance = 100.0f;
@@ -24,6 +25,9 @@ public class LaserController : MonoBehaviour
         // Remove the cursor
         Cursor.visible = false;
 
+        // Set width
+        line.startWidth = lineWidth;
+        line.endWidth = lineWidth;
        
         // Define the colour of the laser
         Color c1 = new Color32(200, 50, 50, 128); 
