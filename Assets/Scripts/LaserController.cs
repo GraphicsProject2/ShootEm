@@ -48,9 +48,7 @@ public class LaserController : MonoBehaviour
         // Sets the laser to be pointing in the direction of the weapon model
         Ray ray = new Ray(weaponModel.transform.position, weaponModel.transform.forward);
         RaycastHit hit;
-
-        Debug.Log(ray);
-
+        
         line.SetPosition(0, weaponModel.transform.position);
         // Creates the laser so that it does not pass through anything 
         if (Physics.Raycast(ray, out hit, laserDistance))
