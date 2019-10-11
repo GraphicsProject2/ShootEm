@@ -37,13 +37,15 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = position;
 
-        // Player direction
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition.y = 1;
-        Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        Vector3 relativePosition = targetPosition - mousePosition;
+        // Player rotation
+        //Vector3 mousePosition = Input.mousePosition;
+        //mousePosition.y = 1;
+        //Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        //Vector3 relativePosition = targetPosition - mousePosition;
 
-        Quaternion rotation = Quaternion.LookRotation(relativePosition);
-        transform.rotation = rotation;
+        //Quaternion rotation = Quaternion.LookRotation(relativePosition);
+        //transform.rotation = rotation;
+
+        transform.LookAt(Input.mousePosition);
     }
 }
