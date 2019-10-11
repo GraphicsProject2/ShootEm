@@ -20,6 +20,7 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 targetPos = target.position;
         targetPos.y = transform.position.y;
+        //targetPos.z += -1.5f;
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothing);
     }
 }
