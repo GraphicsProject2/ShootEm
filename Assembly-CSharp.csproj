@@ -76,12 +76,19 @@
     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\HandgunScriptLPFP.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\FollowScript.cs" />
     <Compile Include="Assets\Scripts\LaserController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\WeaponController.cs" />
     <Compile Include="Assets\Scripts\WeaponFollowMouse.cs" />
+    <Compile Include="Assets\Yurowm\Demo\Scripts\Actions.cs" />
+    <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterPanel.cs" />
+    <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterViewer.cs" />
+    <Compile Include="Assets\Yurowm\Demo\Scripts\PlayerController.cs" />
     <None Include="Assets\Shaders\LaserShader.shader" />
+    <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

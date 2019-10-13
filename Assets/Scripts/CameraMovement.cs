@@ -13,21 +13,9 @@ public class CameraMovement : MonoBehaviour
         Vector3 initPosition = target.transform.position;
         initPosition.y += 10.0f;
         transform.position = initPosition;
-<<<<<<< HEAD:Assets/Scripts/CameraMovement.cs
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 targetPos = target.position;
-        targetPos.y = transform.position.y;
-        //targetPos.z += -1.5f;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothing);
-    }
-}
-=======
-    }
-
+ 
     // Update is called once per frame
     void Update()
     {
@@ -36,4 +24,3 @@ public class CameraMovement : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothing);
     }
 }
->>>>>>> daniel:Assets/Scripts/CameraMovement.cs
