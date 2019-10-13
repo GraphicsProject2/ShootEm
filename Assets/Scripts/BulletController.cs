@@ -18,8 +18,8 @@ public class BulletController : MonoBehaviour
     // Settings for the bullet that will determine its features 
     public float range;
     public float speed;
-    public int damageAmount = 50;
-    public string tagToDamage;
+    public int damageAmount;
+    //public string tagToDamage;
 
 
     void Start()
