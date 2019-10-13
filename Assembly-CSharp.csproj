@@ -64,9 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\FollowScript.cs" />
     <Compile Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
-    <Compile Include="Assets\terrain\EndlessTerrain.cs" />
-    <Compile Include="Assets\terrain\ObjectGenerator.cs" />
-    <Compile Include="Assets\terrain\ObjectSection.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\XAxisSpin.cs" />
     <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\shader info.txt" />
     <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\Blend SM3.shader" />
