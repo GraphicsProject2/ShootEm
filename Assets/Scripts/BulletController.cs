@@ -57,6 +57,7 @@ public class BulletController : MonoBehaviour
             Destroy(this.gameObject);
         }
         */
+        Destroy(col.gameObject);
         Destroy(this.gameObject);
         Debug.Log("Collision registered");
     }

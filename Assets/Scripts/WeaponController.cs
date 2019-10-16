@@ -130,7 +130,7 @@ public class WeaponController : MonoBehaviour
             }
             
         }
-        Debug.Log(timeSinceLastShot);
+        //Debug.Log(timeSinceLastShot);
 
         // Incriment timers
         timeSinceLastReload = timeSinceLastReload + Time.deltaTime;
