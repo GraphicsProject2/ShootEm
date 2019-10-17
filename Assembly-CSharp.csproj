@@ -74,6 +74,7 @@
     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Misc\LookAtCamera.cs" />
     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\AutomaticGunScriptLPFP.cs" />
     <Compile Include="Assets\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\HandgunScriptLPFP.cs" />
+    <Compile Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\RotateGameObject.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\EndlessTerrain.cs" />
@@ -81,6 +82,12 @@
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\FollowScript.cs" />
     <Compile Include="Assets\Scripts\LaserController.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\MenuScript\ButtonSelectionScript.cs" />
+    <Compile Include="Assets\Scripts\MenuScript\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MenuScript\RotateWeapon.cs" />
+    <Compile Include="Assets\Scripts\MenuScript\WeaponSelection.cs" />
+    <Compile Include="Assets\Scripts\ObstacleGenerator.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\WeaponController.cs" />
     <Compile Include="Assets\Scripts\WeaponFollowMouse.cs" />
@@ -89,7 +96,10 @@
     <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterViewer.cs" />
     <Compile Include="Assets\Yurowm\Demo\Scripts\PlayerController.cs" />
     <None Include="Assets\Shaders\LaserShader.shader" />
+    <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\shader info.txt" />
     <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
+    <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\Blend SM3.shader" />
+    <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\Blend SM2.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/jp/Documents/Studies/MelbU/y2/sem 2/Graphic and Interaction/project2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

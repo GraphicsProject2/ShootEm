@@ -5,6 +5,7 @@ using UnityEngine;
 public class EndlessTerrain : MonoBehaviour
 {
     public const float maxViewDist = 100;
+    public GameObject objects;
     public Transform viewer;
     //public Material material;
     public Texture texture;
@@ -52,7 +53,7 @@ public class EndlessTerrain : MonoBehaviour
                 }
                 else
                 {
-                    terrainChunkDictionary.Add(viewedChunkCoord, new TerrainChunk(viewedChunkCoord, chunkSize, transform, texture));
+                    terrainChunkDictionary.Add(viewedChunkCoord, new TerrainChunk(viewedChunkCoord, chunkSize, transform, texture, objects));
                 }
             }
         }
@@ -65,7 +66,7 @@ public class EndlessTerrain : MonoBehaviour
         Bounds bounds;
         MeshRenderer meshRenderer;
 
-        public TerrainChunk(Vector2 coord, int size, Transform parent, Texture texture)
+        public TerrainChunk(Vector2 coord, int size, Transform parent, Texture texture, GameObject objects)
         {
             position = coord * size;
             bounds = new Bounds(position, Vector2.one * size);
@@ -77,7 +78,9 @@ public class EndlessTerrain : MonoBehaviour
             meshRenderer.material.mainTexture = texture;
             SetVisible(false);
             meshObject.transform.parent = parent;
-        }
+
+			ObstacleGenerator obstacleGenerator = new ObstacleGenerator(meshObject, objects);
+		}
 
         public void UpdateTerrainChunk()
         {
