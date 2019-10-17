@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: cb25b76aec6258d409b0f49b1a805589
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - object1: {fileID: 100008, guid: 54a9cf01843431742a3126013891032d, type: 3}
+  - object2: {fileID: 100008, guid: 272f6ea372a7343499b5aa612014761f, type: 3}
+  - object3: {instanceID: 0}
+  - object4: {instanceID: 0}
+  - terrain: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
