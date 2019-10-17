@@ -14,6 +14,7 @@ public class BulletController : MonoBehaviour
 {
 
     private Vector3 initialPos;
+    
 
     // Settings for the bullet that will determine its features 
     public float range;
@@ -46,19 +47,20 @@ public class BulletController : MonoBehaviour
     // Handle collisions
     void OnTriggerEnter(Collider col)
     {
-        /*
-        if (col.gameObject.tag == tagToDamage)
+        if (true)
         {
             // Damage object with relevant tag
-            //HealthManager healthManager = col.gameObject.GetComponent<HealthManager>();
-            //healthManager.ApplyDamage(damageAmount);
+            HealthAndScoreManager healthAndScoreManager = col.gameObject.GetComponent<HealthAndScoreManager>();
+            healthAndScoreManager.ApplyDamage(damageAmount);
 
             // Destroy self
             Destroy(this.gameObject);
         }
-        */
-        Destroy(col.gameObject);
-        Destroy(this.gameObject);
+       
+        
+        //Destroy(col.gameObject);
+        //Destroy(this.gameObject);
+        
         Debug.Log("Collision registered");
     }
 }
