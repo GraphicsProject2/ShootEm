@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-//Rename to WeaponController 
-
 public class WeaponController : MonoBehaviour
 {
     public BulletController bulletPrefab;

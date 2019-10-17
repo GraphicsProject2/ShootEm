@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Program adapted from "IncrimentScoreOnDestroy" Lab8 Solutions for COMP30019 By The 
+University Of Melbourne School Of Computing And Information Systems
+*/
+
 public class IncrimentScoreOnKill : MonoBehaviour
 {
     public int incrementAmount;
