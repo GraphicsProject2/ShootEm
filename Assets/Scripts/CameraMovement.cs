@@ -8,10 +8,14 @@ public class CameraMovement : MonoBehaviour
     public float smoothing = 0.1f;
     private Vector3 velocity = Vector3.zero;
 
+    public float yOffset;
+    public float xOffset;
+    public float zOffset;
+
     void Start()
     {
         Vector3 initPosition = target.transform.position;
-        initPosition.y += 10.0f;
+        initPosition.y += yOffset;
         transform.position = initPosition;
     }
 
@@ -21,6 +25,7 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 targetPos = target.position;
         targetPos.y = transform.position.y;
+
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothing);
     }
 }
