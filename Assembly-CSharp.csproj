@@ -81,6 +81,10 @@
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\FollowScript.cs" />
     <Compile Include="Assets\Scripts\LaserController.cs" />
+    <Compile Include="Assets\Scripts\MenuScript\ButtonSelectionScript.cs" />
+    <Compile Include="Assets\Scripts\MenuScript\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MenuScript\RotateWeapon.cs" />
+    <Compile Include="Assets\Scripts\MenuScript\WeaponSelection.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\WeaponController.cs" />
     <Compile Include="Assets\Scripts\WeaponFollowMouse.cs" />
