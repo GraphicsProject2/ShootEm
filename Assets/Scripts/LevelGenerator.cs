@@ -24,7 +24,7 @@ public class LevelGenerator : MonoBehaviour
     {
         mc = terrain.GetComponent<MeshCollider>();
         int random= (int)UnityEngine.Random.Range(1,4);
-        generateLevel(random);
+        generateLevel(1);
         GenerateGameObjects();
     }
 
