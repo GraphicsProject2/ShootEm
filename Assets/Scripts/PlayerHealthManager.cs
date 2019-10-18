@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthManager : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class PlayerHealthManager : MonoBehaviour
         this.healthDisplay.text = "Health: " + playerHealth;
 
         // Exit the scene when health reaches  0
+        if(playerHealth <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
         
     }
 

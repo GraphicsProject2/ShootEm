@@ -18,6 +18,9 @@ public class BulletController : MonoBehaviour
     public float range;
     public float speed;
     public int damageAmount;
+
+    private string enemyName = "Enemy2(Clone)";
+
     //public string tagToDamage;
 
 
@@ -45,20 +48,24 @@ public class BulletController : MonoBehaviour
     // Handle collisions
     void OnTriggerEnter(Collider col)
     {
-        if (true)
+        if (col.gameObject.name == enemyName)
         {
             // Damage object with relevant tag
             HealthAndScoreManager healthAndScoreManager = col.gameObject.GetComponent<HealthAndScoreManager>();
             healthAndScoreManager.ApplyDamage(damageAmount);
-
-            // Destroy self
             Destroy(this.gameObject);
+
         }
+
+        //Otherwise just destroy the bullet
+        //Destroy(this.gameObject);
+        
        
+
         
         //Destroy(col.gameObject);
         //Destroy(this.gameObject);
         
-        Debug.Log("Collision registered");
+        Debug.Log(col.gameObject.name);
     }
 }
