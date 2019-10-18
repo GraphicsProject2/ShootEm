@@ -8,8 +8,6 @@ University Of Melbourne School Of Computing And Information Systems
 */
 
 
-// Rename to BulletController
-
 public class BulletController : MonoBehaviour
 {
 
