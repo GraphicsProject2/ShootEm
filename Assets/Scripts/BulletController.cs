@@ -20,6 +20,7 @@ public class BulletController : MonoBehaviour
     public int damageAmount;
 
     private string enemyName = "Enemy2(Clone)";
+    private string terrainTag = "TerrainObject";
 
     //public string tagToDamage;
 
@@ -57,12 +58,14 @@ public class BulletController : MonoBehaviour
 
         }
 
+        if(col.gameObject.tag == terrainTag)
+        {
+            Destroy(this.gameObject);
+        }
+
+
         //Otherwise just destroy the bullet
         //Destroy(this.gameObject);
-        
-       
-
-        
         //Destroy(col.gameObject);
         //Destroy(this.gameObject);
         
