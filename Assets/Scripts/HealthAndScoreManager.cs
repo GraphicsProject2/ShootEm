@@ -14,6 +14,7 @@ public class HealthAndScoreManager : MonoBehaviour
 
     //public ScoreManager scoreManager;
     public int startingHealth = 100;
+    public ParticleSystem explosion;
     //public int enemyScoreValue = 10;
 
     // Use Unity's event system to decouple logic relating
@@ -45,6 +46,8 @@ public class HealthAndScoreManager : MonoBehaviour
 
             // Destroy the enemy and incriment the score when enemy is destroyed
             Destroy(this.gameObject);
+            Instantiate(explosion, transform.position, transform.rotation);
+            explosion.Play();
 
             // Find the score manager GameObject
             //this.scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
@@ -53,7 +56,7 @@ public class HealthAndScoreManager : MonoBehaviour
             ///scoreManager.score = scoreManager.score + enemyScoreValue;
 
             //this.zeroHealthEvent.Invoke();
-            
+
         }
     }
 
