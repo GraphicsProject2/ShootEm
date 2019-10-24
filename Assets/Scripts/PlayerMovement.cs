@@ -6,46 +6,44 @@ public class PlayerMovement : MonoBehaviour
 {
     public float movespeed = 10.0f;
     //public Transform target;
-    public GameObject player;
+    //public GameObject player;
     public float sensitivity;
-
-    private float xLoc;
-    private float zLoc;
-    private float yLoc;
-
+    public Rigidbody player;
 
     // Start is called before the first frame update
     void Start()
     {
         // Initalise the player looking foward
-        player.transform.LookAt(transform.forward);
+        //player.transform.LookAt(transform.forward);
+        player = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Player position
-        Vector3 position = transform.position;
+        //Vector3 movement = new Vector3(0.0f, 0.0f, 0.0f);
+        //// Player position
+        ////Vector3 position = transform.position;
 
-        if (Input.GetKey("w"))
-        {
-            position.z += movespeed * Time.deltaTime;
-        }
-        if (Input.GetKey("s"))
-        {
-            position.z -= movespeed * Time.deltaTime;
-        }
-        if (Input.GetKey("a"))
-        {
-            position.x -= movespeed * Time.deltaTime;
-        }
-        if (Input.GetKey("d"))
-        {
-            position.x += movespeed * Time.deltaTime;
-        }
 
-        transform.position = position;
+        //if (Input.GetKey("w"))
+        //{
+        //    movement.z += movespeed;
+        //}
+        //if (Input.GetKey("s"))
+        //{
+        //    movement.z -= movespeed;
+        //}
+        //if (Input.GetKey("a"))
+        //{
+        //    movement.x -= movespeed;
+        //}
+        //if (Input.GetKey("d"))
+        //{
+        //    movement.x += movespeed;
+        //}
 
+        //player.velocity += movement;
 
         // Adapted from Lab 8 solutions but is being utilised to control the direction of a character
         Vector2 mouseScreenPos = Input.mousePosition;
@@ -82,5 +80,33 @@ public class PlayerMovement : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(relativePosition);
         transform.rotation = rotation;
         */
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 movement = new Vector3(0.0f, 0.0f, 0.0f);
+        // Player position
+        //Vector3 position = transform.position;
+
+
+        if (Input.GetKey("w"))
+        {
+            movement.z += movespeed;
+        }
+        if (Input.GetKey("s"))
+        {
+            movement.z -= movespeed;
+        }
+        if (Input.GetKey("a"))
+        {
+            movement.x -= movespeed;
+        }
+        if (Input.GetKey("d"))
+        {
+            movement.x += movespeed;
+        }
+
+        player.velocity = movement;
+        Debug.Log(player.position);
     }
 }
