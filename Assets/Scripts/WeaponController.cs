@@ -17,6 +17,8 @@ public class WeaponController : MonoBehaviour
     public float reloadSpeed;
     public float accuracy;
     public float distanceFromPlayer;
+    public float playerRight;
+    public float playerFoward;
 
     private int ammunition;
     private float timeSinceLastReload;
@@ -50,8 +52,8 @@ public class WeaponController : MonoBehaviour
         //////////////////////////// Movement And Direction ////////////////////////////
 
         // Handle the position of the weapon relative to the player 
-        this.transform.position = player.transform.position + (player.transform.forward * distanceFromPlayer)
-            + (player.transform.right * distanceFromPlayer);
+        this.transform.position = player.transform.position + (player.transform.forward * playerFoward)
+            + (player.transform.right * playerRight);
 
 
         // Handle the direction the weapon is faceing (Sorced from PlayerMovement)
