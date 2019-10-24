@@ -41,7 +41,7 @@ public class PlayerHealthManager : MonoBehaviour
             Destroy(col.gameObject);
             playerHealth = playerHealth - healthLoss;
         }
-        Debug.Log(playerHealth);
+        //Debug.Log(playerHealth);
 
     }
 }
