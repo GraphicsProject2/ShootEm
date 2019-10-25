@@ -3,21 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * WeaponController is the primary script that the movement and operation of 
+ * the players weapon is sourced from as well as displaying the information
+ * attributed to the weapon on the screen.
+ */
+
+
 
 public class WeaponController : MonoBehaviour
 {
+    // Public objects to be assigned for each weapon
     public BulletController bulletPrefab;
     public Text ammoDisplay;
     public Text reloadDisplay;
     public GameObject player;
-    //public Text debugDisplay;
 
+    // Public sounds to be used in the game
+    public AudioSource shootSound;
+    public AudioSource casingSound1;
+    public AudioSource casingSound2;
+    public AudioSource reloadSound;
+    
+    // Public variables to change the charactaristics and position of 
+    // each weapon
     public int ammoCapacity;
     public float fireSpeed;
     public float reloadSpeed;
     public float accuracy;
-    public float distanceFromPlayer;
+    public float playerRight;
+    public float playerFoward;
 
+    // Private variables used within this function
     private int ammunition;
     private float timeSinceLastReload;
     private float timeSinceLastShot;
@@ -25,10 +42,10 @@ public class WeaponController : MonoBehaviour
     private float shotErrorCoefficient = 2.0f;
     private float shotErrorMax = 5.0f;
     private bool shooting;
-
     private float newXRot;
     private float newYRot;
     private float newZRot;
+
 
 
     // Start is called before the first frame update
@@ -38,21 +55,20 @@ public class WeaponController : MonoBehaviour
         ammunition = ammoCapacity;
         shotError = 0.0f;
         shooting = false;
+
+        // Set all the sounds to be utilised within this function
+
     }
 
     // Update is called once per frame
-
-
-
     void Update()
     {
 
         //////////////////////////// Movement And Direction ////////////////////////////
 
         // Handle the position of the weapon relative to the player 
-        this.transform.position = player.transform.position + (player.transform.forward * distanceFromPlayer)
-            + (player.transform.right * distanceFromPlayer);
-
+        this.transform.position = player.transform.position + (player.transform.forward * playerFoward)
+            + (player.transform.right * playerRight);
 
         // Handle the direction the weapon is faceing (Sorced from PlayerMovement)
         // Adapted from Lab 8 solutions but is being utilised to control the direction of a character
@@ -80,8 +96,11 @@ public class WeaponController : MonoBehaviour
             // Reset the ammunition count
             ammunition = ammoCapacity;
             timeSinceLastReload = 0;
-        }
 
+            // Play reload sound
+            reloadSound.Play();
+
+        }
 
         // Deturmine if the mouse key is being held down
         if(Input.GetMouseButtonDown(0) == true)
@@ -92,7 +111,6 @@ public class WeaponController : MonoBehaviour
         {
             shooting = false;
         }
-
 
         // Fire the shot provided there is ammo and it doesnt exceed the fire rate 
         // and the hero hasnt reloaded recently
@@ -126,9 +144,21 @@ public class WeaponController : MonoBehaviour
             {
                 timeSinceLastShot = 0.0f;
             }
+
+            // Play the sound for the bullet shooting
+            shootSound.Play();
+
+            // Play the sound of a bullet dropping
+            if (Random.Range(0.0f, 1.0f) > 0.5)
+            {
+                casingSound1.PlayDelayed(0.3f);
+            }
+            else
+            {
+                casingSound2.PlayDelayed(0.3f);
+            }
             
         }
-        //Debug.Log(timeSinceLastShot);
 
         // Incriment timers
         timeSinceLastReload = timeSinceLastReload + Time.deltaTime;
@@ -140,7 +170,6 @@ public class WeaponController : MonoBehaviour
         { 
             shotError = shotError - (Time.deltaTime * shotErrorCoefficient);
         }
-
 
         ////////////////////////////// UI ////////////////////////////////////////////////////
 
@@ -156,11 +185,6 @@ public class WeaponController : MonoBehaviour
 
         // Update the live Score
         this.ammoDisplay.text = "Ammo: " + ammunition + "/" + ammoCapacity;
-
-        //Show anything to debug live
-        // this.debugDisplay.text = shotError.ToString();
-
-
     }
 
 

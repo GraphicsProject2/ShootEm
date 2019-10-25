@@ -18,8 +18,10 @@ public class BulletController : MonoBehaviour
     public float range;
     public float speed;
     public int damageAmount;
+    public AudioSource hitSound;
 
     private string enemyName = "Enemy2(Clone)";
+    private string terrainTag = "TerrainObject";
 
     //public string tagToDamage;
 
@@ -53,19 +55,15 @@ public class BulletController : MonoBehaviour
             // Damage object with relevant tag
             HealthAndScoreManager healthAndScoreManager = col.gameObject.GetComponent<HealthAndScoreManager>();
             healthAndScoreManager.ApplyDamage(damageAmount);
-            Destroy(this.gameObject);
+            hitSound.Play();
 
+            Destroy(this.gameObject);
         }
 
-        //Otherwise just destroy the bullet
-        //Destroy(this.gameObject);
-        
-       
-
-        
-        //Destroy(col.gameObject);
-        //Destroy(this.gameObject);
-        
-        Debug.Log(col.gameObject.name);
+        if(col.gameObject.tag == terrainTag)
+        {
+            Destroy(this.gameObject);
+        }
+        //Debug.Log(col.gameObject.name);
     }
 }

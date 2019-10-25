@@ -39,7 +39,6 @@ public class LevelGenerator : MonoBehaviour
             level= (int)UnityEngine.Random.Range(0, 3);
         }
         generateLevel(1);
-        GenerateGameObjects();
     }
 
     private void generateLevel(int level)

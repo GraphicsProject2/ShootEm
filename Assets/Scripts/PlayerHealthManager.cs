@@ -4,8 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+
 public class PlayerHealthManager : MonoBehaviour
 {
+    /*
+     * PlayerHealthManager manages the health for the player 
+     * 
+     */ 
 
     public Text healthDisplay;
     public int healthLoss;
@@ -41,7 +47,7 @@ public class PlayerHealthManager : MonoBehaviour
             Destroy(col.gameObject);
             playerHealth = playerHealth - healthLoss;
         }
-        Debug.Log(playerHealth);
+        //Debug.Log(playerHealth);
 
     }
 }
