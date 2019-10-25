@@ -14,7 +14,34 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        int difficulty = 0;
+        if (PlayerPrefs.HasKey("Difficulty"))
+        {
+            difficulty = PlayerPrefs.GetInt("Difficulty");
+        }
+
+        switch (difficulty)
+        {
+            case 0:
+                this.minSpawnTime = 1.5f;
+                this.randomSpawnTime = 1.5f;
+                break;
+
+            case 1:
+                this.minSpawnTime = 1.0f;
+                this.randomSpawnTime = 1.5f;
+                break;
+
+            case 2:
+                this.minSpawnTime = 1.0f;
+                this.randomSpawnTime = 1.0f;
+                break;
+
+            case 3:
+                this.minSpawnTime = 0.5f;
+                this.randomSpawnTime = 0.5f;
+                break;
+        }
     }
 
     // Update is called once per frame

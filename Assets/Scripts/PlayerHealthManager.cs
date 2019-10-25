@@ -18,6 +18,10 @@ public class PlayerHealthManager : MonoBehaviour
     public int playerHealth;
     public string enemyName;
 
+    public GameObject MainGame;
+    public GameObject GameOver;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +37,9 @@ public class PlayerHealthManager : MonoBehaviour
         // Exit the scene when health reaches  0
         if(playerHealth <= 0)
         {
-            SceneManager.LoadScene(0);
+            MainGame.SetActive(false);
+            GameOver.SetActive(true);
+            Time.timeScale = 0;
         }
         
     }

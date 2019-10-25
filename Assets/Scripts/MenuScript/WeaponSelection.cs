@@ -10,8 +10,13 @@ public class WeaponSelection : MonoBehaviour
     
     private void Start()
     {
-        // Renders the first weapom
-        this.currentIndex = 0;
+        // If player already selected a weapon, render it instead. 
+        if (PlayerPrefs.HasKey("Weapon"))
+            this.currentIndex = PlayerPrefs.GetInt("Weapon");
+        else
+            this.currentIndex = 0;
+
+        Debug.Log(this.currentIndex);
         transform.GetChild(this.currentIndex).gameObject.SetActive(true);
     }
 
@@ -32,5 +37,12 @@ public class WeaponSelection : MonoBehaviour
         transform.GetChild(Mathf.Abs(currentIndex)).gameObject.SetActive(false);
         transform.GetChild(Mathf.Abs(prevIndex)).gameObject.SetActive(true);
         this.currentIndex = prevIndex;
+    }
+
+
+    public void SelectWeapon()
+    {
+        PlayerPrefs.SetInt("Weapon", this.currentIndex);
+        //console.log(PlayerPrefs.GetInt("Weapon"))
     }
 }

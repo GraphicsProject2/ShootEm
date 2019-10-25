@@ -17,6 +17,7 @@ public class WeaponController : MonoBehaviour
     public BulletController bulletPrefab;
     public Text ammoDisplay;
     public Text reloadDisplay;
+    public Text noAmmoDisplay;
     public GameObject player;
 
     // Public sounds to be used in the game
@@ -67,8 +68,8 @@ public class WeaponController : MonoBehaviour
         //////////////////////////// Movement And Direction ////////////////////////////
 
         // Handle the position of the weapon relative to the player 
-        this.transform.position = player.transform.position + (player.transform.forward * playerFoward)
-            + (player.transform.right * playerRight);
+        //this.transform.position = player.transform.position + (player.transform.forward * playerFoward);
+        //+(player.transform.right * playerRight);
 
         // Handle the direction the weapon is faceing (Sorced from PlayerMovement)
         // Adapted from Lab 8 solutions but is being utilised to control the direction of a character
@@ -184,7 +185,17 @@ public class WeaponController : MonoBehaviour
         }
 
         // Update the live Score
-        this.ammoDisplay.text = "Ammo: " + ammunition + "/" + ammoCapacity;
+        this.ammoDisplay.text = "Ammo:   " + ammunition + "   /   " + ammoCapacity;
+
+        if (this.ammunition == 0)
+        {
+            this.noAmmoDisplay.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.noAmmoDisplay.gameObject.SetActive(false);
+        }
+
     }
 
 

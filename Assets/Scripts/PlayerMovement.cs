@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     //public Transform target;
     //public GameObject player;
     public float sensitivity;
-    public Rigidbody player;
+    Rigidbody player;
 
     // Start is called before the first frame update
     void Start()
