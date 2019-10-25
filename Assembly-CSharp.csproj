@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A4C844A8-F3B9-99C8-31D8-7BDABFFCADED}</ProjectGuid>
+    <ProjectGuid>{96909DF5-B032-938B-D81F-C8B1A077C049}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -100,30 +100,32 @@
     <Compile Include="Assets\Yurowm\Demo\Scripts\PlayerController.cs" />
     <None Include="Assets\Shaders\LaserShader.shader" />
     <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\shader info.txt" />
+    <None Include="Assets\Prefabs\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Unlit.shader" />
+    <None Include="Assets\Prefabs\Free Low Poly Desert Pack\Materials\Shaders\Vertex_Color_Basic.shader" />
     <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
     <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\Blend SM3.shader" />
     <None Include="Assets\Images\Credits.txt" />
     <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\Blend SM2.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -309,13 +311,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/dancl/Desktop/GIProj2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Viraj/Desktop/Year 3/SEM2/COMP30019/ShootEm/ShootEm/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
