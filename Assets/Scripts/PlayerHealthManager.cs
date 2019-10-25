@@ -4,8 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+
 public class PlayerHealthManager : MonoBehaviour
 {
+    /*
+     * PlayerHealthManager manages the health for the player 
+     * 
+     */ 
 
     public Text healthDisplay;
     public int healthLoss;

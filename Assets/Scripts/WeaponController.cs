@@ -23,6 +23,7 @@ public class WeaponController : MonoBehaviour
     public AudioSource shootSound;
     public AudioSource casingSound1;
     public AudioSource casingSound2;
+    public AudioSource reloadSound;
     
     // Public variables to change the charactaristics and position of 
     // each weapon
@@ -95,6 +96,10 @@ public class WeaponController : MonoBehaviour
             // Reset the ammunition count
             ammunition = ammoCapacity;
             timeSinceLastReload = 0;
+
+            // Play reload sound
+            reloadSound.Play();
+
         }
 
         // Deturmine if the mouse key is being held down
