@@ -9,7 +9,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
+<<<<<<< HEAD
     <ProjectGuid>{9741A8A5-012A-055D-A3A5-84EF4A993278}</ProjectGuid>
+=======
+    <ProjectGuid>{96909DF5-B032-938B-D81F-C8B1A077C049}</ProjectGuid>
+>>>>>>> 160982c188ff71917f6017bad0f97f84f7353b97
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -108,6 +112,7 @@
     <None Include="Assets\Images\Credits.txt" />
     <None Include="Assets\Prefabs\Rocks and Boulders 2\Shaders\Blend SM2.shader" />
     <Reference Include="Unity.Timeline.Editor">
+<<<<<<< HEAD
       <HintPath>/Users/mitchrule/Desktop/ShootEm2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
@@ -127,6 +132,27 @@
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>/Users/mitchrule/Desktop/ShootEm2/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+=======
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+>>>>>>> 160982c188ff71917f6017bad0f97f84f7353b97
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -312,6 +338,7 @@
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.8f1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
+<<<<<<< HEAD
       <HintPath>/Users/mitchrule/Desktop/ShootEm2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
@@ -319,6 +346,15 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>/Users/mitchrule/Desktop/ShootEm2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+=======
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>/Users/mitchrule/Desktop/ShootEm/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+>>>>>>> 160982c188ff71917f6017bad0f97f84f7353b97
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.8f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
