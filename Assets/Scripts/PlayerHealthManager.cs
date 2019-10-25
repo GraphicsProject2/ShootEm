@@ -41,11 +41,11 @@ public class PlayerHealthManager : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         // Checks if it is an enemy prefab
-        if(col.gameObject.name == enemyName)
+        if(col.gameObject.tag == "Enemy")
         {
             // Decrement health if so 
             Destroy(col.gameObject);
-            playerHealth = playerHealth - healthLoss;
+            playerHealth -= healthLoss;
         }
         //Debug.Log(playerHealth);
 
