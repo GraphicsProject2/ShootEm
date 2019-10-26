@@ -8,8 +8,6 @@ public class LevelGenerator : MonoBehaviour
 
     private static int DEFAULT_LEVEL = -1;
 
-    private string playerName = "Enemy2(Clone)";
-
     private String object1;
     private String object2;
     private String object3;
@@ -38,7 +36,7 @@ public class LevelGenerator : MonoBehaviour
         {
             level= (int)UnityEngine.Random.Range(0, 3);
         }
-        generateLevel(1);
+        generateLevel(2);
     }
 
     private void generateLevel(int level)
