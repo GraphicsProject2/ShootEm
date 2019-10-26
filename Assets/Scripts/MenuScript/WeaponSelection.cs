@@ -17,7 +17,9 @@ public class WeaponSelection : MonoBehaviour
             this.currentIndex = 0;
 
         Debug.Log(this.currentIndex);
-        transform.GetChild(this.currentIndex).gameObject.SetActive(true);
+
+        // Absolute as index may be negative to allow infinite scrolling
+        transform.GetChild(Mathf.Abs(currentIndex)).gameObject.SetActive(true);
     }
 
     // Renders the next weapon

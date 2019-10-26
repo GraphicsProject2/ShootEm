@@ -39,19 +39,21 @@ public class PlayerHealthManager : MonoBehaviour
         {
             MainGame.SetActive(false);
             GameOver.SetActive(true);
+            // Pause the game
             Time.timeScale = 0;
         }
         
     }
 
     void OnTriggerEnter(Collider col)
-    {
+	{ 
+        Debug.Log("col");
         // Checks if it is an enemy prefab
-        if(col.gameObject.name == enemyName)
+        if(col.gameObject.tag == "Enemy")
         {
             // Decrement health if so 
             Destroy(col.gameObject);
-            playerHealth = playerHealth - healthLoss;
+            playerHealth -= healthLoss;
         }
         //Debug.Log(playerHealth);
 

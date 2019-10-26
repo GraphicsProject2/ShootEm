@@ -65,15 +65,15 @@ public class WeaponController : MonoBehaviour
     void Update()
     {
 
-        //////////////////////////// Movement And Direction ////////////////////////////
+		//////////////////////////// Movement And Direction ////////////////////////////
 
-        // Handle the position of the weapon relative to the player 
-        //this.transform.position = player.transform.position + (player.transform.forward * playerFoward);
-        //+(player.transform.right * playerRight);
+		// Handle the position of the weapon relative to the player 
+		//this.transform.position = player.transform.position + (player.transform.forward)
+		//+ (player.transform.right);
 
-        // Handle the direction the weapon is faceing (Sorced from PlayerMovement)
-        // Adapted from Lab 8 solutions but is being utilised to control the direction of a character
-        Vector2 mouseScreenPos = Input.mousePosition;
+		// Handle the direction the weapon is faceing (Sorced from PlayerMovement)
+		// Adapted from Lab 8 solutions but is being utilised to control the direction of a character
+		Vector2 mouseScreenPos = Input.mousePosition;
 
         // Take the distance from the camera
         float distanceFromCameraToXZPlane = Camera.main.transform.position.y;
@@ -87,7 +87,10 @@ public class WeaponController : MonoBehaviour
         // Set the player to look at the point of intercetion
         this.transform.LookAt(new Vector4(facepos.x, player.transform.forward.y, facepos.z));
 
-
+        // Set x rotation to 0
+        this.transform.eulerAngles = new Vector3(0, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
+        
+        
         //////////////////////////// Weapon Mechanics  ///////////////////////////////////
 
         // Reload the weapon

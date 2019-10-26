@@ -38,8 +38,8 @@ public class EnemySpawner : MonoBehaviour
                 break;
 
             case 3:
-                this.minSpawnTime = 0.5f;
-                this.randomSpawnTime = 0.5f;
+                this.minSpawnTime = 0.2f;
+                this.randomSpawnTime = 0.2f;
                 break;
         }
     }

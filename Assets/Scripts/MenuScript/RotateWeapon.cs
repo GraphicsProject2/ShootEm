@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This class rotates the weapon about the z axis when selecting weapons */
 public class RotateWeapon : MonoBehaviour
 {
     public float rotationSpeed;
@@ -16,6 +17,7 @@ public class RotateWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Rotates the weapon
         this.rotationZ += rotationSpeed * Time.deltaTime;
         this.rotationZ %= 360;
         transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationZ);

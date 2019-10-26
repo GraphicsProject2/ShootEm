@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Diagnostics;
 
 /*
 Program adapted from "ScoreManager" Lab8 Solutions for COMP30019 By The 
@@ -21,4 +22,19 @@ public class ScoreManager : MonoBehaviour
         // Display the score
         this.scoreDisplay.text = "Score: " + this.score;
     }
+
+    public void saveScore()
+	{
+		if (PlayerPrefs.HasKey("Score"))
+		{
+			if (this.score > PlayerPrefs.GetInt("Score"))
+			{
+				PlayerPrefs.SetInt("Score", score);
+			}
+		}
+        else
+		{
+			PlayerPrefs.SetInt("Score", score);
+		}
+	}
 }

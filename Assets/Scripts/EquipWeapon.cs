@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This script equips the weapon that user selects in the menu */
 public class EquipWeapon : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -9,18 +11,17 @@ public class EquipWeapon : MonoBehaviour
     {
         disableAllWeapon();
         int weaponIndex = PlayerPrefs.GetInt("Weapon");
-        Debug.Log("weapon");
-        Debug.Log(weaponIndex);
-        transform.GetChild(weaponIndex).gameObject.SetActive(true);
+
+        // Enable selected weapon
+        transform.GetChild(Math.Abs(weaponIndex)).gameObject.SetActive(true);
     }
 
-
+    // Disables all weapon
     private void disableAllWeapon()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(false);
-            Debug.Log("Disabled");
         }
     }
 }
