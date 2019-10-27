@@ -18,10 +18,11 @@ public class LevelGenerator : MonoBehaviour
 
     private String healthCrate;
 
-    public int numObject1;
-    public int numObject2;
-    public int numObject3;
-    public int numObject4;
+    private int numObject1;
+    private int numObject2;
+    private int numObject3;
+    private int numObject4;
+
     private int numExtras = 10;
 
     public GameObject terrain;
@@ -53,6 +54,11 @@ public class LevelGenerator : MonoBehaviour
             object3 = "Rock1C";
             object4 = "Rock1D";
             terrain.GetComponent<Renderer>().material = Resources.Load("RockyMaterial", typeof(Material)) as Material;
+
+            numObject1 = 20;
+            numObject2 = 40;
+            numObject3 = 40;
+            numObject4 = 40;
         }
         else if (level==2)
         {
@@ -61,6 +67,11 @@ public class LevelGenerator : MonoBehaviour
             object3 = "tree_c";
             object4 = "tree_d";
             terrain.GetComponent<Renderer>().material = Resources.Load("ForestMaterial", typeof(Material)) as Material;
+
+            numObject1 = 50;
+            numObject2 = 50;
+            numObject3 = 50;
+            numObject4 = 50;
         }
         else if (level==0)
         {
@@ -69,6 +80,11 @@ public class LevelGenerator : MonoBehaviour
             object3 = "rus_build_5et_05_low";
             object4 = "rus_build_9et_02b_low";
             terrain.GetComponent<Renderer>().material = Resources.Load("CityMaterial", typeof(Material)) as Material;
+
+            numObject1 = 8;
+            numObject2 = 8;
+            numObject3 = 8;
+            numObject4 = 8;
         }
         else if (level == 1)
         {
@@ -77,6 +93,11 @@ public class LevelGenerator : MonoBehaviour
             object3 = "Mixed_Tree_02";
             object4 = "Mixed_Well_01";
             terrain.GetComponent<Renderer>().material = Resources.Load("DesertMaterial", typeof(Material)) as Material;
+
+            numObject1 = 30;
+            numObject2 = 30;
+            numObject3 = 30;
+            numObject4 = 10;
         }
 
         GenerateGameObjects();
@@ -128,6 +149,11 @@ public class LevelGenerator : MonoBehaviour
 
         xRandom = (int)UnityEngine.Random.Range(mc.bounds.min.x, mc.bounds.max.x);
         zRandom = (int)UnityEngine.Random.Range(mc.bounds.min.z, mc.bounds.max.z);
+
+        if(xRandom<20 && zRandom< 20 && xRandom> -20 && zRandom> -20)
+        {
+            GenerateRandomPoint();
+        }
 
         return new Vector3(xRandom, 0.0f, zRandom);
     }

@@ -52,6 +52,7 @@ public class EnemySpawner : MonoBehaviour
         {
             Vector3 spawnPosition = generateSpawnPosition(player.transform.position);
             Instantiate(enemyObject, spawnPosition, Quaternion.identity);
+            enemyObject.transform.localScale = Vector3.one * 2;
 
             resetTimer();
         }

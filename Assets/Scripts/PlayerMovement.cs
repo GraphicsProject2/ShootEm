@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
         // Initalise the player looking foward
         //player.transform.LookAt(transform.forward);
         player = GetComponent<Rigidbody>();
-        player.constraints = RigidbodyConstraints.FreezePositionY;
+        player.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     }
 
     // Update is called once per frame
@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(relativePosition);
         transform.rotation = rotation;
         */
+        player.transform.eulerAngles = new Vector3(0f, player.transform.eulerAngles.y, player.transform.eulerAngles.z);
     }
 
     void FixedUpdate()
