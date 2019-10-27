@@ -22,7 +22,8 @@ public class BulletController : MonoBehaviour
 
     private string enemyName = "Enemy2(Clone)";
     private string terrainTag = "TerrainObject";
-    private string oilDrum = "Oil_Drum";
+    private string healthCrate = "healthCrate";
+    private string cylinder = "oilBarrel";
 
     //public string tagToDamage;
 
@@ -66,12 +67,23 @@ public class BulletController : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (col.gameObject.tag == oilDrum)
+        if (col.gameObject.tag == healthCrate)
         {
             HealthAndScoreManager healthAndScoreManager = col.gameObject.GetComponent<HealthAndScoreManager>();
-            healthAndScoreManager.ApplySurroundingDamage(damageAmount);
+            healthAndScoreManager.ReviveHealth();
             Destroy(this.gameObject);
+            Destroy(col.gameObject);
         }
+
+        if(col.gameObject.tag == cylinder)
+        {
+            ScoreManager scoreManager = col.gameObject.GetComponent<ScoreManager>();
+            scoreManager.bonusScore();
+            Destroy(this.gameObject);
+            Destroy(col.gameObject);
+        }
+
+
         //Debug.Log(col.gameObject.name);
     }
 }

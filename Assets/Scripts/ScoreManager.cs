@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Diagnostics;
+using System;
 
 /*
 Program adapted from "ScoreManager" Lab8 Solutions for COMP30019 By The 
@@ -37,4 +38,9 @@ public class ScoreManager : MonoBehaviour
 			PlayerPrefs.SetInt("Score", score);
 		}
 	}
+
+    internal void bonusScore()
+    {
+        this.score += 200;
+    }
 }

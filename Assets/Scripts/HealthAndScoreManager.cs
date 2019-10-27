@@ -67,11 +67,8 @@ public class HealthAndScoreManager : MonoBehaviour
         return this.currentHealth;
     }
 
-    internal void ApplySurroundingDamage(int damageAmount)
+    public void ReviveHealth()
     {
-        Instantiate(explosion, transform.position, transform.rotation);
-        explosion.Play();
-        //damage all objects surrounding a particular radius(needs implementation)
-
+        currentHealth = startingHealth;
     }
 }
