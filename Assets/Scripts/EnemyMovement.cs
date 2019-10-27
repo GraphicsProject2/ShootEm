@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
+		this.GetComponent<Actions>().Run();
         player = GameObject.Find("Player");
         enemy = GetComponent<Rigidbody>();
     }

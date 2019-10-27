@@ -57,9 +57,13 @@ public class WeaponController : MonoBehaviour
         shotError = 0.0f;
         shooting = false;
 
-        // Set all the sounds to be utilised within this function
+        // Start with a fully loaded weapon
+		timeSinceLastReload = reloadSpeed + 0.1f;
 
-    }
+
+		// Set all the sounds to be utilised within this function
+
+	}
 
     // Update is called once per frame
     void Update()

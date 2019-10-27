@@ -52,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
         {
             Vector3 spawnPosition = generateSpawnPosition(player.transform.position);
             Instantiate(enemyObject, spawnPosition, Quaternion.identity);
-            enemyObject.transform.localScale = Vector3.one * 2;
+            enemyObject.transform.localScale = Vector3.one * 5;
 
             resetTimer();
         }
@@ -65,8 +65,8 @@ public class EnemySpawner : MonoBehaviour
 
     private Vector3 generateSpawnPosition(Vector3 playerPosition)
     {
-        float x = Random.Range(-20, 20);
-        float z = Random.Range(-20, 20);
+        float x = Random.Range(playerPosition.x - 20f, playerPosition.x + 20f);
+        float z = Random.Range(playerPosition.z - 20f, playerPosition.z + 20f);
         Vector3 spawnPosition = new Vector3(x, 0.0f, z);
         return spawnPosition;
     }

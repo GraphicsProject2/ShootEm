@@ -7,7 +7,7 @@ using UnityEngine;
 public class LaserController : MonoBehaviour
 {
     private LineRenderer line;
-    private readonly float lineWidth = 0.03f;
+    private readonly float lineWidth = 0.1f;
 
     public GameObject weaponModel;
     public float laserDistance = 100.0f;

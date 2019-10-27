@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
         //player.transform.LookAt(transform.forward);
         player = GetComponent<Rigidbody>();
         player.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
+		//this.GetComponent<Actions>().Aiming();
     }
 
     // Update is called once per frame
@@ -82,7 +84,28 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = rotation;
         */
         player.transform.eulerAngles = new Vector3(0f, player.transform.eulerAngles.y, player.transform.eulerAngles.z);
-    }
+
+
+		// To keep the player within the boundaries
+		if (player.transform.position.x > 250)
+		{
+			player.transform.position = new Vector3(250f, player.transform.position.y, player.transform.position.z);
+		}
+		if (player.transform.position.x < -250)
+		{
+			player.transform.position = new Vector3(-250f, player.transform.position.y, player.transform.position.z);
+		}
+		if (player.transform.position.z > 250)
+		{
+			player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, 250f);
+		}
+		if (player.transform.position.z < -250)
+		{
+			player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -250f);
+		}
+
+
+	}
 
     void FixedUpdate()
     {
