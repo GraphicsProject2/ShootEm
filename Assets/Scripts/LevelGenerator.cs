@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-
-    private static int DEFAULT_LEVEL = -1;
+    
 
     private string playerName = "Enemy2(Clone)";
 
@@ -34,11 +33,11 @@ public class LevelGenerator : MonoBehaviour
     {
         mc = terrain.GetComponent<MeshCollider>();
         int level= PlayerPrefs.GetInt("Location");
-        if (level != DEFAULT_LEVEL)
+        if (level == -1)
         {
             level= (int)UnityEngine.Random.Range(0, 3);
         }
-        generateLevel(1);
+        generateLevel(level);
     }
 
     private void generateLevel(int level)
@@ -79,6 +78,9 @@ public class LevelGenerator : MonoBehaviour
             object4 = "Mixed_Well_01";
             terrain.GetComponent<Renderer>().material = Resources.Load("DesertMaterial", typeof(Material)) as Material;
         }
+
+        GenerateGameObjects();
+
     }
 
 

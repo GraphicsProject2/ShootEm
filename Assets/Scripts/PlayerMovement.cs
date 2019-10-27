@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         // Initalise the player looking foward
         //player.transform.LookAt(transform.forward);
         player = GetComponent<Rigidbody>();
+        player.constraints = RigidbodyConstraints.FreezePositionY;
     }
 
     // Update is called once per frame
@@ -108,5 +109,13 @@ public class PlayerMovement : MonoBehaviour
 
         player.velocity = movement;
         Debug.Log(player.position);
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.gameObject==Resources.Load("ScifiCrate_2", typeof(GameObject)))
+        {
+            Destroy(gameObject);
+        }
     }
 }

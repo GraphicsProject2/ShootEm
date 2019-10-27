@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using System;
 
 /*
 Program adapted from "HealthManager" Lab8 Solutions for COMP30019 By The 
@@ -64,5 +65,13 @@ public class HealthAndScoreManager : MonoBehaviour
     public int GetHealth()
     {
         return this.currentHealth;
+    }
+
+    internal void ApplySurroundingDamage(int damageAmount)
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
+        explosion.Play();
+        //damage all objects surrounding a particular radius(needs implementation)
+
     }
 }

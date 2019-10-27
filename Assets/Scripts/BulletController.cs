@@ -22,6 +22,7 @@ public class BulletController : MonoBehaviour
 
     private string enemyName = "Enemy2(Clone)";
     private string terrainTag = "TerrainObject";
+    private string oilDrum = "Oil_Drum";
 
     //public string tagToDamage;
 
@@ -62,6 +63,13 @@ public class BulletController : MonoBehaviour
 
         if(col.gameObject.tag == terrainTag)
         {
+            Destroy(this.gameObject);
+        }
+
+        if (col.gameObject.tag == oilDrum)
+        {
+            HealthAndScoreManager healthAndScoreManager = col.gameObject.GetComponent<HealthAndScoreManager>();
+            healthAndScoreManager.ApplySurroundingDamage(damageAmount);
             Destroy(this.gameObject);
         }
         //Debug.Log(col.gameObject.name);
